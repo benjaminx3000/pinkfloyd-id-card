@@ -1,0 +1,26 @@
+pf-background {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: @z-bottom;
+}
+
+.pf-background {
+    @media (min-width: @screen-md-min) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100.66%;
+        height: 100.66%;
+        transform: translate3d(-50%, -50%, 0);
+        padding-top: percentage(image-height('src/skin/@{main-background-url}') / image-width('src/skin/@{main-background-url}'));
+        background-image: url('@{main-background-url}');
+        background-position: 50% 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
