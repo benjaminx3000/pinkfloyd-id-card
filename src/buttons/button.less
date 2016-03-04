@@ -1,0 +1,13 @@
+.btn:extend(.btn all) {
+    color: #ffffff;
+    background-color: @gray;
+    transition: box-shadow 0.25s, transform 0.25s;
+    transform-origin: center;
+    display: inline-block;
+    &:hover,
+    &:focus,
+    &.is-active {
+        color: #fff;
+        box-shadow: 0 3px 15px @gray-alpha;
+    }
+}

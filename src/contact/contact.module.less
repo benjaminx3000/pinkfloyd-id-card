@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     padding: @hero-aspect @grid-gutter-width @grid-gutter-width/2;
-    > a {
+    .form-group a {
         display: block;
     }
 }
@@ -22,8 +22,16 @@
 }
 
 .pf-contact__edit {
-    transform: translateY(-50%);;
+    margin-top: -1.25em;
+    /* transform: translateY(-50%); */;
     float: right;
+    [class*='icon-'] {
+        font-size: 1.25em;
+        &:before {
+            position: relative;
+            top: 0.1em;
+        }
+    }
 }
 
 .pf-contact__name {

@@ -1,7 +1,11 @@
 .btn--round:extend(.btn all) {
-    .button-variant(@gray, @text-color, transparent);
-    .square(3em);
-    line-height: 3em;
+    .square(2.5em);
+    line-height: 2.5em;
     padding: 0;
     border-radius: 50%;
+    &:hover,
+    &:focus,
+    &.is-active {
+        transform: scale(1.1);
+    }
 }
