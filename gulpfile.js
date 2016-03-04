@@ -1,15 +1,17 @@
 var gulp = require('gulp');
-var debug = require('gulp-debug');
+
 ////////////////////////////////////////////////
 
+gulp.task('clean', clean);
 gulp.task('copyImages', copyImages);
 gulp.task('copy', ['copyImages']);
-
 gulp.task('less', less);
-gulp.task('serve', serve);
 gulp.task('uglify', uglify);
+gulp.task('wiredep', wiredep);
 gulp.task('watch', watch);
-gulp.task('default', ['less', 'serve', 'watch']);
+gulp.task('serve', serve);
+
+gulp.task('default', ['copy', 'less', 'wiredep', 'serve', 'watch']);
 
 ///////////////////////////////////////////////
 
@@ -22,6 +24,12 @@ function onError(err) {
     })(err);
     this.emit('end');
 };
+
+function clean() {
+    var del = require('del');
+
+    return del('build');
+}
 
 function copyImages() {
     var plumber = require('gulp-plumber');
@@ -44,19 +52,17 @@ function less() {
         .pipe(concat('temp.less'))
         .pipe(less({paths: ['bower_components']}))
         .pipe(rename('pf-cards.css'))
-        .pipe(gulp.dest('build'))
-        .pipe(debug())
-        ;
+        .pipe(gulp.dest('build'));
 }
 
 function templates() {
     var plumber = require('gulp-plumber');
     var ngTemplates = require('gulp-ng-templates');
 
-    return gulp.src('src/**/*.hmtl')
+    return gulp.src('src/**/*.html')
         .pipe(plumber({errorHandler: onError}))
         .pipe(ngTemplates())
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('./'));
 }
 
 function serve() {
@@ -89,4 +95,14 @@ function uglify() {
 
 function watch() {
     gulp.watch(['app/**/*.less'], ['less']);
+}
+
+function wiredep() {
+    var wiredep = require('wiredep').stream;
+    var plumber = require('gulp-plumber');
+
+    return gulp.src('src/index.html')
+        .pipe(plumber({errorHandler: onError}))
+        .pipe(wiredep())
+        .pipe(gulp.dest('./'));
 }
