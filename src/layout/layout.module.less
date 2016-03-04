@@ -1,0 +1,33 @@
+@import 'bootstrap/less/variables';
+@import 'bootstrap/less/mixins';
+
+@main-background-url: 'img/background.png';
+
+body {
+    min-height: 100vh;
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-base;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: @gray-lighter;
+}
+
+.pf-main {
+    .clearfix;
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    z-index: @z-middle;
+
+    > .pf-card-list {}
+
+    @media (max-width: @screen-sm-max) {
+        padding: @grid-gutter-width/2;
+    }
+
+    @media (min-width: @screen-md-min) {
+        max-width: 670px;
+        padding-top: ;
+    }
+}

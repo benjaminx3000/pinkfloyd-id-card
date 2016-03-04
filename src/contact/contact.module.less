@@ -1,0 +1,44 @@
+@import 'bootstrap/less/variables';
+@import (reference) 'bootstrap/less/forms';
+@hero-aspect: percentage(image-height('src/skin/img/nick-mason-hero.png') / image-width('src/skin/img/nick-mason-hero.png'));
+/* .form-control-static{
+    .form-control-static;
+    display: block;
+} */
+
+.pf-contact {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: @hero-aspect @grid-gutter-width @grid-gutter-width/2;
+    > a {
+        display: block;
+    }
+}
+
+.pf-contact__avatar {
+    transform: translateY(-50%);;
+    float: left;
+}
+
+.pf-contact__edit {
+    transform: translateY(-50%);;
+    float: right;
+}
+
+.pf-contact__name {
+    clear: both;
+    font-size: 1.4em;
+}
+
+.pf-contact__phone:extend(.form-control-static) {
+
+}
+
+.pf-contact__mobile:extend(.form-control-static) {
+
+}
+
+.pf-contact__email:extend(.form-control-static) {
+
+}
