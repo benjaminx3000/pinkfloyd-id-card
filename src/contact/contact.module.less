@@ -13,6 +13,75 @@
     padding: @hero-aspect @grid-gutter-width @grid-gutter-width/2;
     .form-group a {
         display: block;
+        [class*='icon-']::before {
+            position: relative;
+            top: 0.1em;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+
+    }
+
+    &.primary-pink {
+        .pf-contact__edit {
+            background-color: @pink;
+        }
+    }
+    &.cta-pink {
+        .form-group a {
+            color: @pink;
+        }
+    }
+    &.primary-purple {
+        .pf-contact__edit {
+            background-color: @purple;
+        }
+    }
+    &.cta-purple {
+        .form-group a {
+            color: @purple;
+        }
+    }
+    &.primary-blue {
+        .pf-contact__edit {
+            background-color: @blue;
+        }
+    }
+    &.cta-blue {
+        .form-group a {
+            color: @blue;
+        }
+    }
+    &.primary-light-blue {
+        .pf-contact__edit {
+            background-color: @lightBlue;
+        }
+    }
+    &.cta-light-blue {
+        .form-group a {
+            color: @lightBlue;
+        }
+    }
+    &.primary-aqua {
+        .pf-contact__edit {
+            background-color: @aqua;
+        }
+    }
+    &.cta-aqua {
+        .form-group a {
+            color: @aqua;
+        }
+    }
+    &.primary-brown {
+        .pf-contact__edit {
+            background-color: @brown;
+        }
+    }
+    &.cta-brown {
+        .form-group a {
+            color: @brown;
+        }
     }
 }
 
@@ -40,7 +109,6 @@
 }
 
 .pf-contact__phone:extend(.form-control-static) {
-
 }
 
 .pf-contact__mobile:extend(.form-control-static) {

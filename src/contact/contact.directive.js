@@ -8,7 +8,7 @@
         var directive = {
             restrict: 'AE',
             templateUrl: 'contact/contact.html',
-            scope: {},
+            scope: {contact: '='},
             controller: 'pfContactController as vm',
             bindToController: true
         };
@@ -17,16 +17,17 @@
     }
 
     /*@ngInject*/
-    function pfContactController() {
+    function pfContactController($log) {
         var vm = this;
-        vm.phone = '555-555-5555';
-        vm.mobile = '555-555-5555';
-        vm.email = 'test@testerson.com';
+        //public fields
+        vm.classes = 'primary-' + vm.contact.primaryColor + ' cta-' + vm.contact.ctaColor;
 
+        //public methods
         vm.save = save;
-
+        ///////////////
         function save() {
             $log.debug('saveing', vm.id);
+            vm.isEditing = false;
         }
     }
 

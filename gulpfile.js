@@ -12,7 +12,7 @@ gulp.task('wiredep', wiredep);
 gulp.task('watch', watch);
 gulp.task('serve', serve);
 
-gulp.task('default', ['copy', 'less', 'wiredep', 'uglify', 'serve', 'watch']);
+gulp.task('default', ['copy', 'less', 'wiredep', 'uglify', 'templates', 'serve', 'watch']);
 
 ///////////////////////////////////////////////
 
@@ -68,9 +68,9 @@ function templates() {
 
     return gulp.src('src/**/*.html')
         .pipe(plumber({errorHandler: onError}))
-        .pipe(ngTemplates())
+        .pipe(ngTemplates({module: 'pfcards', standalone: false}))
         .pipe(livereload())
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('build'));
 }
 
 function serve() {

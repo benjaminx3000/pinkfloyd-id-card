@@ -1,45 +1,45 @@
 [{
-    'name': 'Roger Waters',
-    'avatar': 'roger-waters-avatar.png',
-    'hero': 'roger-waters-hero.png',
-    'primaryColor': 'aqua',
-    'ctaColor': 'pink',
-    'contactItem': {
-        'phone': '(613) 555-1212',
-        'mobile': '(613) 222-8989',
-        'email': 'dgilmour@pinkfloyd.com'
+    "name": "Roger Waters",
+    "avatar": "roger-waters-avatar.png",
+    "hero": "roger-waters-hero.png",
+    "primaryColor": "aqua",
+    "ctaColor": "pink",
+    "contactItem": {
+        "phone": "(613) 555-1212",
+        "mobile": "(613) 222-8989",
+        "email": "dgilmour@pinkfloyd.com"
     }
 }, {
-    'name': 'David Gilmour',
-    'avatar': 'david-gilmour-avatar.png',
-    'hero': 'david-gilmour-hero.png',
-    'primaryColor': 'blue',
-    'ctaColor': 'aqua',
-    'contactItem': {
-        'phone': '(613) 555-1212',
-        'mobile': '(613) 222-8989',
-        'email': 'rwaters@pinkfloyd.com'
+    "name": "David Gilmour",
+    "avatar": "david-gilmour-avatar.png",
+    "hero": "david-gilmour-hero.png",
+    "primaryColor": "blue",
+    "ctaColor": "aqua",
+    "contactItem": {
+        "phone": "(613) 555-1212",
+        "mobile": "(613) 222-8989",
+        "email": "rwaters@pinkfloyd.com"
     }
 }, {
-    'name': 'Richard Wright',
-    'avatar': 'richard-wright-avatar.png',
-    'hero': 'richard-wright-hero.png',
-    'primaryColor': 'pink',
-    'ctaColor': 'purple',
-    'contactItem': {
-        'phone': '(613) 555-1212',
-        'mobile': '(613) 222-8989',
-        'email': 'rwright@pinkfloyd.com'
+    "name": "Richard Wright",
+    "avatar": "richard-wright-avatar.png",
+    "hero": "richard-wright-hero.png",
+    "primaryColor": "pink",
+    "ctaColor": "purple",
+    "contactItem": {
+        "phone": "(613) 555-1212",
+        "mobile": "(613) 222-8989",
+        "email": "rwright@pinkfloyd.com"
     }
 }, {
-    'name': 'Nick Mason',
-    'avatar': 'nick-mason-avatar.png',
-    'hero': 'nick-mason-hero.png',
-    'primaryColor': 'brown',
-    'ctaColor': 'light-blue',
-    'contactItem': {
-        'phone': '(613) 555-1212',
-        'mobile': '(613) 222-8989',
-        'email': 'nmason@pinkfloyd.com'
+    "name": "Nick Mason",
+    "avatar": "nick-mason-avatar.png",
+    "hero": "nick-mason-hero.png",
+    "primaryColor": "brown",
+    "ctaColor": "light-blue",
+    "contactItem": {
+        "phone": "(613) 555-1212",
+        "mobile": "(613) 222-8989",
+        "email": "nmason@pinkfloyd.com"
     }
-}];
+}]

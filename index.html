@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Pink Floyd ID Cards</title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300" type="text/css">
-  <link rel="stylesheet" href="https://file.myfontastic.com/6eWj52cJBaoihsGnjWJDxj/icons.css">
   <!-- bower:css -->
   <!-- endbower -->
   <link rel="stylesheet" href="build/pf-cards.css">
@@ -14,62 +13,12 @@
   <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
   <script src="build/app.min.js"></script>
+  <script src="build/templates.min.js"></script>
 </head>
 
 <body ng-app="pfcards">
     <main id="main" class="pf-main">
-        <ul class="pf-cards-list">
-            <li>
-                <div class="pf-card pf-contact" style="background-image: url('build/img/nick-mason-hero.png')">
-                    <img src="build/img/david-gilmour-avatar.png" alt="" class="pf-contact__avatar" />
-                    <a href="" class="btn--circle pf-contact__edit">Edit</a>
-                    <h2 class="pf-contact__name">Richard Wright</h2>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">rwright@pinkfloyd.com</a>
-                </div>
-            </li>
-
-            <li>
-                <div class="pf-card pf-contact" style="background-image: url('build/img/nick-mason-hero.png')">
-                    <img src="build/img/david-gilmour-avatar.png" alt="" class="pf-contact__avatar" />
-                    <a href="" class="btn--circle pf-contact__edit">Edit</a>
-                    <h2 class="pf-contact__name">Richard Wright</h2>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">rwright@pinkfloyd.com</a>
-                </div>
-            </li>
-            <li>
-                <div class="pf-card pf-contact" style="background-image: url('build/img/nick-mason-hero.png')">
-                    <img src="build/img/david-gilmour-avatar.png" alt="" class="pf-contact__avatar" />
-                    <a href="" class="btn--circle pf-contact__edit">Edit</a>
-                    <h2 class="pf-contact__name">Richard Wright</h2>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">rwright@pinkfloyd.com</a>
-                </div>
-            </li>
-            <li>
-                <div class="pf-card pf-contact" style="background-image: url('build/img/nick-mason-hero.png')">
-                    <img src="build/img/david-gilmour-avatar.png" alt="" class="pf-contact__avatar" />
-                    <a href="" class="btn--circle pf-contact__edit">Edit</a>
-                    <h2 class="pf-contact__name">Richard Wright</h2>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">rwright@pinkfloyd.com</a>
-                </div>
-            </li>
-            <li>
-                <div class="pf-card pf-contact" style="background-image: url('build/img/nick-mason-hero.png')">
-                    <img src="build/img/david-gilmour-avatar.png" alt="" class="pf-contact__avatar" />
-                    <a href="" class="btn--circle pf-contact__edit">Edit</a>
-                    <h2 class="pf-contact__name">Richard Wright</h2>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">555-555-5555</a>
-                    <a href="" class="pf-contact__phone">rwright@pinkfloyd.com</a>
-                </div>
-            </li>
+        <ui-view></ui-view>
     </main>
     <pf-background></pf-background>
 </body>

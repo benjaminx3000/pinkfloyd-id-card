@@ -1,18 +1,24 @@
-<div class="pf-card pf-contact" style="background-image: url('build/img/nick-mason-hero.png')">
-    <img src="build/img/david-gilmour-avatar.png" alt="" class="pf-contact__avatar" />
-    <a ng-click="vm.isEditing = !vm.isEditing" class="btn--round pf-contact__edit"><span class="icon-pf-pencil"></span></a>
-    <h2 class="pf-contact__name">Richard Wright</h2>
-    <div class="form-group">
-        <a href="" class="pf-contact__phone" ng-show="!vm.isEditing">{{vm.phone}}</a>
-        <input type="text" class="form-control" ng-show="vm.isEditing" name="phone" ng-model="vm.phone" />
-    </div>
-    <div class="form-group">
-        <a href="" class="pf-contact__phone" ng-show="!vm.isEditing">{{vm.mobile}}</a>
-        <input type="text" class="form-control" ng-show="vm.isEditing"  name="phone" ng-model="vm.mobile" />
-    </div>
-    <div class="form-group">
-        <a href="" class="pf-contact__phone" ng-show="!vm.isEditing">{{vm.email}}</a>
-        <input type="text" class="form-control" ng-show="vm.isEditing" name="phone" ng-model="vm.email" />
-    </div>
-    <a ng-click="vm.save()" ng-show="vm.isEditing" class="btn">Save</a>
+<div
+    class="pf-card pf-contact {{vm.classes}}"
+    style="background-image: url('build/img/{{vm.contact.hero}}')"
+>
+    <form name="form">
+        <img ng-src="/build/img/{{vm.contact.avatar}}" alt="" class="pf-contact__avatar" />
+        <!-- TODO: Check if user can edit -->
+        <a ng-click="vm.isEditing = !vm.isEditing" class="btn--round pf-contact__edit"><span class="icon-pf-pencil"></span></a>
+        <h2 class="pf-contact__name">{{vm.contact.name}}</h2>
+        <div class="form-group">
+            <a href="" class="pf-contact__phone" ng-show="!vm.isEditing"><span class="icon-pf-phone"></span> <span class="text-muted">{{vm.contact.contactItem.phone}}</span></a>
+            <input type="text" class="form-control" ng-show="vm.isEditing" name="phone" ng-model="vm.contact.contactItem.phone" />
+        </div>
+        <div class="form-group">
+            <a href="" class="pf-contact__phone" ng-show="!vm.isEditing"><span class="icon-pf-mobile"></span> <span class="text-muted">{{vm.contact.contactItem.mobile}}</span></a>
+            <input type="text" class="form-control" ng-show="vm.isEditing"  name="phone" ng-model="vm.contact.contactItem.mobile" />
+        </div>
+        <div class="form-group">
+            <a href="" class="pf-contact__phone" ng-show="!vm.isEditing"><span class="icon-pf-email"></span> <span class="text-muted">{{vm.contact.contactItem.email}}</span></a>
+            <input type="text" class="form-control" ng-show="vm.isEditing" name="phone" ng-model="vm.contact.contactItem.email" />
+        </div>
+        <a ng-click="vm.save()" ng-show="vm.isEditing" ng-disabled="form.$pristine" class="btn">Save</a>
+    </form>
 </div>

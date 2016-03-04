@@ -1,4 +1,4 @@
 (function() {
     angular
-        .module('pfcards', []);
+        .module('pfcards', ['ui.router']);
 }());
