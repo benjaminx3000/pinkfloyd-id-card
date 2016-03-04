@@ -19,5 +19,8 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.2.18"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
   }
 }

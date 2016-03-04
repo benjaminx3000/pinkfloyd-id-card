@@ -1,4 +1,4 @@
 (function() {
     angular
-        .module('pfcards', []);
+        .module('pf.card', []);
 }());

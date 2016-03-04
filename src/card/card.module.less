@@ -1,0 +1,13 @@
+@card-background: #ffffff;
+@card-primary: rgba(0.5, 0.5, 0.5, 1);
+@card-cta: rgba(0.3, 0.3, 0.3, 1);
+@gray-alpha: rgba(1, 1, 1 , 0.3);
+
+.pf-card {
+    background-color: @card-background;
+    transition: box-shadow 0.5s;
+    &:hover,
+    &.is-active {
+        box-shadow: 0 3px 15px @gray-alpha;
+    }
+}
